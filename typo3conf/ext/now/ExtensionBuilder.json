@@ -1,0 +1,39 @@
+{
+    "modules": [],
+    "properties": {
+        "backendModules": [],
+        "description": "2.Versuch",
+        "emConf": {
+            "category": "plugin",
+            "custom_category": "",
+            "dependsOn": "typo3 => 7.6.0-7.6.99\n",
+            "disableLocalization": false,
+            "disableVersioning": false,
+            "skipGenerateDocumentationTemplate": false,
+            "sourceLanguage": "en",
+            "state": "alpha",
+            "targetVersion": "7.6.0-7.6.99",
+            "version": "1.0.0"
+        },
+        "extensionKey": "now",
+        "name": "jetzt geht\u00b4s los",
+        "originalExtensionKey": "",
+        "originalVendorName": "",
+        "persons": [
+            {
+                "company": "Exinit",
+                "email": "david@exinit.de",
+                "name": "David",
+                "role": "Developer"
+            }
+        ],
+        "plugins": [],
+        "vendorName": "Exinit"
+    },
+    "wires": [],
+    "log": {
+        "last_modified": "2017-05-19 01:53",
+        "extension_builder_version": "7.6.18",
+        "be_user": "David (1)"
+    }
+}

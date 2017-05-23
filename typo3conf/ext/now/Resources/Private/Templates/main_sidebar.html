@@ -1,0 +1,20 @@
+<f:layout name="Default"/>
+
+<f:section name="Main">
+    <div class="container">
+        <f:cObject typoscriptObjectPath="lib.rootline"/>
+        <div class="row">
+            <div class="col-md-9">
+                <p>Default! Main und</p>
+                <f:format.raw>{main}</f:format.raw>
+            </div>
+            <div class="col-md-3">
+                <f:cObject typoscriptObjectPath="lib.subnav"/>
+                <p>Sidebar</p>
+                <f:format.raw>{right}</f:format.raw>
+            </div>
+
+        </div>
+
+        <hr>
+</f:section>

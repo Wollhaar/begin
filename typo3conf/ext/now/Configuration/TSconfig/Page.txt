@@ -1,0 +1,103 @@
+## Backend-Layouts definieren
+mod.web_layout.BackendLayouts {
+
+    ## Homepage
+    1 {
+        title = Homepage
+        icon = EXT:now/Resources/Public/Icons/belayout_homepage.png
+        config {
+            backend_layout {
+                colCount = 3
+                rowCount = 2
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = header
+                                colspan = 3
+                                colPos = 3
+                            }
+                        }
+                    }
+                    2 {
+                        columns {
+                            1 {
+                                name = Content Links
+                                colPos = 1
+                            }
+                            2 {
+                                name = Content Mitte
+                                colPos = 0
+                            }
+                            3 {
+                                name = Content Rechts
+                                colPos = 2
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    ## main & sidebar (3/4 - 1/4)
+    4 {
+        title = main & Sidebar (3/4 - 1/4)
+        icon = EXT:now/Resources/Public/Icons/belayout_2col.png
+        config {
+            backend_layout {
+                colCount = 4
+                rowCount = 1
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = main
+                                colspan = 3
+                                colPos = 0
+                            }
+                            2 {
+                                name = Sidebar
+                                colPos = 2
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    ## full width (100%)
+    3 {
+        title = full width (100%)
+        icon = EXT:now/Resources/Public/Icons/belayout_1col.png
+        config {
+            backend_layout {
+                colCount = 1
+                rowCount = 1
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Hauptinhalt
+                                colPos = 0
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+TCEFORM.tt_content.header_layout{
+    altLabels {
+        0 = h2 - Themenueberschrift
+        1 = h1 - Seitenueberschrift
+        2 =
+        3 = h3 - Ueberschrift 3.Ordnung
+        4 = h4 - Ueberschrift 4.Ordnung
+        5 = h5 - Ueberschrift 5.Ordnung
+    }
+    removeItems = 2,4,5
+}
