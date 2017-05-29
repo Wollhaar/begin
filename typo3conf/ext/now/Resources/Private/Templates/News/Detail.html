@@ -12,6 +12,9 @@
 
 <f:section name="content">
 	<f:if condition="{newsItem}">
+		<f:else>
+
+		</f:else>
 		<f:then>
 			<n:format.nothing>
 				<n:excludeDisplayedNews newsItem="{newsItem}" />
@@ -86,12 +89,7 @@
 				</p>
 			</div>
 
-			<f:if condition="{newsItem.teaser}">
-				<!-- teaser -->
-				<div class="teaser-text" itemprop="description">
-					<f:format.html>{newsItem.teaser}</f:format.html>
-				</div>
-			</f:if>
+			# old teaser psition
 
 			<f:if condition="{newsItem.contentElements}">
 				<!-- content elements -->
@@ -104,6 +102,13 @@
 			<div class="news-text-wrap" itemprop="articleBody">
 				<f:format.html>{newsItem.bodytext}</f:format.html>
 			</div>
+
+			<f:if condition="{newsItem.teaser}">
+				<!-- teaser -->
+				<div class="teaser-text" itemprop="description">
+					<f:format.html>{newsItem.teaser}</f:format.html>
+				</div>
+			</f:if>
 
 			<f:if condition="{settings.backPid}">
 				<!-- Link Back -->
@@ -211,9 +216,6 @@
 				</f:if>
 			</div>
 		</f:then>
-		<f:else>
-
-		</f:else>
 	</f:if>
 </f:section>
 </html>
