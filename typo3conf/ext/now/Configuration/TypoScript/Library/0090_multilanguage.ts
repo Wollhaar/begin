@@ -1,4 +1,4 @@
-config.linkVars = (1-2)
+config.linkVars = L(1-2)
 
 ## english
 [globalVar = GP:L=1]
