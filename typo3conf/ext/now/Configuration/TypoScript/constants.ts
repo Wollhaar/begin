@@ -6,4 +6,6 @@ plugin.tx_srlanguagemenu {
     defaultLanguageISOCode = de
     languageTitle = 2
 #    addSelectionListHeader = 1
+    tx_srlanguagemenu.doNotLinkInactive = 0
+    tx_srlanguagemenu.addLinksListHeader = 1
 }
