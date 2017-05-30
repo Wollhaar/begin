@@ -1,0 +1,122 @@
+plugin.tx_srlanguagemenu {
+	settings {
+
+		languageTitle = {$plugin.tx_srlanguagemenu.languageTitle}
+		useSysLanguageTitle = {$plugin.tx_srlanguagemenu.useSysLanguageTitle}
+		useSelfLanguageTitle = {$plugin.tx_srlanguagemenu.useSelfLanguageTitle}
+		useIsoLanguageCountryCode = {$plugin.tx_srlanguagemenu.useIsoLanguageCountryCode}
+
+		defaultLanguageISOCode = {$plugin.tx_srlanguagemenu.defaultLanguageISOCode}
+		defaultCountryISOCode = {$plugin.tx_srlanguagemenu.defaultCountryISOCode}
+		defaultLanguageTitle = {$plugin.tx_srlanguagemenu.defaultLanguageTitle}
+		languagesUidsList = {$plugin.tx_srlanguagemenu.languagesUidsList}
+
+		hideIfNoAltLanguages = {$plugin.tx_srlanguagemenu.hideIfNoAltLanguages}
+
+		target = {$plugin.tx_srlanguagemenu.target}
+		removeParams = {$plugin.tx_srlanguagemenu.removeParams}
+		allowedParams = {$plugin.tx_srlanguagemenu.allowedParams}
+
+		defaultLayout = {$plugin.tx_srlanguagemenu.defaultLayout}
+		showLinkWithFlag = {$plugin.tx_srlanguagemenu.showLinkWithFlag}
+		showCurrentFirst = {$plugin.tx_srlanguagemenu.showCurrentFirst}
+
+		flags.showCurrent = {$plugin.tx_srlanguagemenu.showCurrent}
+		flags.doNotLinkCurrent = {$plugin.tx_srlanguagemenu.doNotLinkCurrent}
+		flags.showInactive = {$plugin.tx_srlanguagemenu.showInactive}
+		flags.doNotLinkInactive = {$plugin.tx_srlanguagemenu.doNotLinkInactive}
+
+		list.header = {$plugin.tx_srlanguagemenu.addSelectionListHeader}
+		list.separator =  {$plugin.tx_srlanguagemenu.selectionListSeparator}
+		list.showCurrent = {$plugin.tx_srlanguagemenu.showCurrent}
+		list.showInactive = {$plugin.tx_srlanguagemenu.showInactive}
+		list.onChangeAttribute = {$plugin.tx_srlanguagemenu.onChangeAttribute}
+
+		links.header = {$plugin.tx_srlanguagemenu.addLinksListHeader}
+		links.showCurrent = {$plugin.tx_srlanguagemenu.showCurrent}
+		links.doNotLinkCurrent = {$plugin.tx_srlanguagemenu.doNotLinkCurrent}
+		links.showInactive = {$plugin.tx_srlanguagemenu.showInactive}
+		links.doNotLinkInactive = {$plugin.tx_srlanguagemenu.doNotLinkInactive}
+
+		englishFlagFile = {$plugin.tx_srlanguagemenu.englishFlagFile}
+
+	    # 	alternateFlags {
+	    # 		fr = fr_CA
+	    # 		es = es_MX
+	    # 	}
+	}
+
+	view {
+		templateRootPaths {
+			0 = EXT:sr_language_menu/Resources/Private/Templates/
+			1 = {$plugin.tx_srlanguagemenu.view.templateRootPath}
+		}
+		partialRootPaths {
+			0 = EXT:sr_language_menu/Resources/Private/Partials/
+			1 = {$plugin.tx_srlanguagemenu.view.partialRootPath}
+		}
+		layoutRootPaths {
+			0 = EXT:sr_language_menu/Resources/Private/Layouts/
+			1 = {$plugin.tx_srlanguagemenu.view.layoutRootPath}
+		}
+		widget.SJBR\SrLanguageMenu\ViewHelpers\Widget\MenuViewHelper.templateRootPaths {
+			0 = EXT:sr_language_menu/Resources/Private/Templates/
+			1 = {$plugin.tx_srlanguagemenu.view.templateRootPath}
+		}
+		widget.SJBR\SrLanguageMenu\ViewHelpers\Widget\MenuViewHelper.partialRootPaths {
+			0 = EXT:sr_language_menu/Resources/Private/Partials/
+			1 = {$plugin.tx_srlanguagemenu.view.partialRootPath}
+		}
+		widget.SJBR\SrLanguageMenu\ViewHelpers\Widget\MenuViewHelper.layoutRootPaths {
+			0 = EXT:sr_language_menu/Resources/Private/Layouts/
+			1 = {$plugin.tx_srlanguagemenu.view.layoutRootPath}
+		}
+	}
+
+	widgets {
+  		menu = USER
+  		menu {
+		    userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+		    vendorName = SJBR
+		    pluginName = LanguageMenu
+		    extensionName = SrLanguageMenu
+		    controller = Menu
+		    action = index
+		    settings =< plugin.tx_srlanguagemenu.settings
+		    view =< plugin.tx_srlanguagemenu.view
+  		}
+  	}
+}
+
+config.tx_extbase {
+	persistence {
+		classes {
+			SJBR\SrLanguageMenu\Domain\Model\Page {
+				mapping {
+					tableName = pages
+					columns {
+						l18n_cfg.mapOnProperty = l18nCfg
+					}
+				}
+			}
+			SJBR\SrLanguageMenu\Domain\Model\PageLanguageOverlay {
+				mapping {
+					tableName = pages_language_overlay
+					columns {
+						pid.mapOnProperty = page
+						sys_language_uid.mapOnProperty = language
+					}
+				}
+			}
+			SJBR\SrLanguageMenu\Domain\Model\SystemLanguage {
+				mapping {
+					tableName = sys_language
+					columns {
+						title.mapOnProperty = title
+						static_lang_isocode.mapOnProperty = isoLanguage
+					}
+				}
+			}
+		}
+	}
+}

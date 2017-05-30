@@ -1,0 +1,297 @@
+2017-04-11  Stanislas Rolland  <typo3(arobas)sjbr.ca>
+
+	* Update version to 6.4.2
+	* Resolves #80815: Remove deprecated TCA option show_thumbs
+
+2017-01-24  Stanislas Rolland  <typo3(arobas)sjbr.ca>
+
+	* Update requirements
+	* Update version to 6.4.1
+
+2017-01-07  Stanislas Rolland  <typo3(arobas)sjbr.ca>
+
+	* Cleanup extension configuration files
+	* Follow-up to #79187: Use TYPO3 8 DB API
+
+2017-01-06  Stanislas Rolland  <typo3(arobas)sjbr.ca>
+
+	* Resolves #79187: Use TYPO3 8 DB API
+	* Resolves #79188: Use registered icon in frontend
+	* Resolves #79189: Migrate extension icon to svg
+	* Resolves #76679: Wrong flag for chinese language
+	* Update version to 6.4.0
+
+2017-01-05  Stanislas Rolland  <typo3(arobas)sjbr.ca>
+
+	* Resolves #79176: Missing renderType on TCA select definition
+	* Resolves #79178: Migrate to LTS 7 icon factory
+	* Resolves #78340: Compatibility with TYPO3 version 8.x and require TYPO3 7 LTS
+
+2016-05-22  Stanislas Rolland  <typo3(arobas)sjbr.ca>
+
+	* Resolves #76096: Labels not working anymore after using the widget (Thanks to Makus Klein)
+	* Update version to 6.3.4	
+
+2016-03-10  Stanislas Rolland  <typo3(arobas)sjbr.ca>
+
+	* Resolves #74818: Remove references to sysext cms labels removed from TYPO3 CMS 7.6
+	* Update version to 6.3.3
+
+2016-03-09  Stanislas Rolland  <typo3(arobas)sjbr.ca>
+
+	* Resolves #73974: Static Info Tables version to 6.3.9 breaks extension
+	* Require Static Info Tables 6.3.9
+	* Update version to 6.3.1
+	* Follow-up to Resolves #73974: Static Info Tables version to 6.3.9 breaks extension
+	* Update version to 6.3.2
+
+2015-12-22  Stanislas Rolland  <typo3(arobas)sjbr.ca>
+
+	* Resolves #71522: Languages not available should be removed from selector
+
+2015-12-21  Stanislas Rolland  <typo3(arobas)sjbr.ca>
+
+	* Resolves #72377: Using HTTP_GET_VARS is deprecated since PHP 4.1
+
+2015-11-17  Stanislas Rolland  <typo3(arobas)sjbr.ca>
+
+	* Resolves #71309: composer.json contains invalid version range for core
+	* Resolves #71487: Template overriding does not work when using the plugin via TS
+
+2015-10-11  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Require Static Info Tables 6.3.1
+	* Update user manual
+	* Correction to composer.json
+	* Resolves #70638: Improve template handling
+	* Update version to 6.3.0
+
+2015-09-14  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Resolves #65991: Fatal error missing zh_CN flag
+	* Resolves #69464: DefaultLanguage Title not configurable
+	* Update version to 6.1.0
+	* Add basic composer.json (Thanks to Markus Klein)
+	* Require Static Info Tables 6.2.1
+	* Cleanup in MenuController.php
+	* Resolves #67738: Changes to template paths do not affect widget
+
+2015-03-19  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Resolves #64145: plugin.tx_srlanguagemenu.englishFlagFile works wrong
+
+2015-03-18  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Move TCA settings to configuration folder
+	* Require TYPO3 CMS 6.2
+	* Enable in TYPO3 CMS 7
+	* Resolves #64948: The view configuration for TYPO3 CMS 7 has been changed
+	* Resolves #65771: Rootpath for Widget not working
+	* Update requirements in the user manual.
+	* Follow-up to #65771 and #64948: Rootpath for Widget not working (Thanks to Markus Klein)
+	* Resolves #63503: Missing Macedonian flag
+
+2014-11-16  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Remove reference to deprecated feinterface
+
+2014-10-24  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Resolves #62447: Wrong requirement of static_info_tables breaks Extension Manager
+	* Update version to 6.0.7
+
+2014-10-08  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Resolves #59719: Hide default translation of page
+	* Update version to 6.0.6
+
+2014-10-01  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Resolves #61299: Language Selection widget in a Fluid template does not work with layout Select
+	* Resolves #61381: Value in layout select should use HTML entities
+	* Resolves #61909: Language menu not cached
+	* Resolves #59499: Property $languageKey doesn't reset to the default value after translation
+
+2014-09-29  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Resolves #58757: useExternalUrl doesn't work properly
+	* Resolves #61382: Missing alt attribute in image tag for language icon
+
+2014-05-01  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Correction to the manual
+	* Resolves #58217: PHP Warning when using the widget multiple times on a page
+	* Correction to widget default settings
+	* Update version to 6.0.5
+
+2014-04-28  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Follow-up to beware of inaccessible page
+
+2014-04-08  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Beware of inaccessible page
+
+2014-03-25  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Cleanup in domain model
+	* Update version to 6.0.4
+
+2014-03-23  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Wrap frontend and database connection globals
+
+2014-03-13  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Resolves #53686: Undefined method in TYPO3 6.1 when extension yag is installed
+
+2014-02-22  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Cleanup calls to deprecated methods
+
+2014-02-18  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Resolves #53686: Undefined method in TYPO3 6.1 when extension yag is installed
+
+2014-02-04  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Escape backslashes in class names in ext_localconf.php
+
+2014-01-20  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Resolves issue #55036: addLinksListHeader not working
+
+2013-11-27  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Resolves issue #54010: Missing parameter in constructor of PageLanguageOverlayRepository in TYPO3 6.2
+	* Enable in TYPO3 6.2
+	* Update version to 6.0.3
+
+2013-11-26  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Resolves issue #51293: Extend Extbase class until issue #47192 is fixed in core (related issue #49077)
+	* Resolves issue #50963: Filter grayscale not working in IE10
+
+2013-07-24  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Revert fix to issue #49077: Extend Extbase class until issue #47192 is fixed in core
+	* Require TYPO3 6.0.7 (or 6.1.2)
+	* Set version to 6.0.2
+
+2013-07-18  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Updated the manual
+	* Add gif version of extension icon for TER
+	* Set version to 6.0.1
+
+2013-07-14  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Fixed bug #49848: Fatal error: __clone method called on non-object
+
+2013-06-26  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Set version to 6.0.0
+
+2013-06-25  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Fixed bug #49403: Incorrect update to TypoScript templates by ext_update.php
+
+2013-06-20  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Cleanup in ext_tables.php
+	* Follow-up to feature #49074: Incorrect paths set in class.ext_update.php
+
+2013-06-18  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Fixed bug #49232: Page language overlay may refer to a deleted Website language
+	* Added feature #4707: Language Dropdown: Customizable, no onchange event, submit button
+	* Fixed bug #31963: Not able to set a position for the default language
+
+2013-06-17  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Require TYPO3 6.0.6 and Static Info Tables version 6.0.4
+	* Update manual
+	* Follow-up to feature #49172: Change default style of language selector
+	* Follow-up to feature #49074: Improve and localize the update script dialog
+	* Fixed bug #10233: Hungarian translation bug
+	* Added feature #7374: Should be able to show a text when language not available
+
+2013-06-16  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Follow-up to feature #49074: Add "Upgrading to version 6.0" section to manual
+	* Added feature #49170: Convert current language icon to png
+	* Added feature #49171: Change the extension icon for the standard Language icon
+	* Added feature #49172: Change default style of language selector
+	* Fixed bug #32047: Language menu uses wrong cHash
+
+2013-06-14  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Fixed bug #8681: In combination with realurl it's possible to spam the realurl cache
+	* Added feature #6651: Add stdWrap to label (how-to example added to manual)
+
+2013-06-13  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Added feature #49108: Improve flags
+
+2013-06-12  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Added feature #49074: Migrate language file to xliff and move them to Resources/Private/Language directory
+	* Added feature #49074: Move flags to Resources/Public/Images/Flags directory
+	* Added feature #49074: Import current language icon to Resources/Public/Images directory
+	* Added feature #49074: Add flexform for configuration of plugin as content element
+	* Added feature #49074: Move TypoScript to static template
+	* Added feature #49074: Move default CSS styles to own static template and external file
+	* Added feature #49074: Add domain model for system languages and pages language overlays
+	* Added feature #49074: Add Fluid templates
+	* Added feature #49074: Add Extbase menu controller
+	* Added feature #49074: Add Fluid widget menu view helper
+	* Added feature #49074: Move new content element wizard configuration to Page TSConfig
+	* Added feature #49074: Change type of SQL columns of old plugin in tt_content
+	* Added feature #49074: Remove old pibased plugin and html template
+	* Added feature #49074: Reconfigure the extension in ext_tables.php and ext_localconf.php
+	* Added feature #49074: Require TYPO3 6.0 and Static Info Tables 6.0
+	* Added feature #49074: Set version to 6.0.0
+	* Added feature #49074: Add update script to convert tt_content and sys_template records
+	* Fixed bug #49077: Extend Extbase class until issue #47192 is fixed in core
+	* Follow-up to feature #49074: Fix default path to flags
+	* Follow-up to feature #49074: Improve ease of configuration a menu layout in TS constants and Fluid widget.
+	* Follow-up to feature #49074: Remove pointer image from TS static template. Was moved to CSS styles.
+	* Follow-up to feature #49074: Remove stdwrap configuration of lists of flags and links. Use Fluid templates.
+	* Follow-up to feature #49074: Remove links separator from TS template. Use CSS styles.
+	* Follow-up to feature #49074: Adjust documentation of the menu widget view helper.
+	* Follow-up to feature #49074: Fix glitch in configuration flexform.
+	* Follow-up to feature #49074: Correction to the TypoScript menu widget
+	* Follow-up to feature #49074: Improve ease of configuration a language title
+	* Follow-up to feature #49074: Update manual
+
+2010-02-23  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Fixed bugtracker issue #12033: Deprecated function ereg_replace on PHP 5.3.0
+	* Version 1.5.2 published to TER
+
+2009-02-19  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Fixed bug introduced in 1.5.0: Incorrect links in drop-down list when not using realUrl
+	* Version 1.5.1 published to TER
+
+2009-02-12  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Tagging version 1.5.0 published to TER
+
+2009-02-11  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Fixed bug: Sort languages in the order specified by the plugin record or TS setup. Thanks to Marco Bamert.
+	* Added feature: New constant showCurrentFirst. Thanks to Patric Pesch.
+	* Added feature: New constant addLinksListHeader and new marker ###LINK_SELECT_LANGUAGE###. Thanks to Ingo Schmitt.
+
+2009-02-10  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Added feature forceUseOfExternalUrl
+
+2009-02-04  Stanislas Rolland  <typo3@sjbr.ca>
+
+	* Initial upload to TYPO3 Forge
+	* Cleanup (CGL, while loops, globals)
+	* Factor out method makeUrl
+	* Simplify method optionsConstructor and more cleanup
+	* Added feature useExternalUrl
