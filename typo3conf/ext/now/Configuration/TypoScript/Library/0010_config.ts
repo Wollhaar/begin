@@ -7,4 +7,9 @@ config {
     # Eindeutigere Fehlermeldungen im Frontend
     # siehe https://docs.typo3.org/typo3cms/TyposcriptReference/Setup/Config/Index.html#contentobjectexceptionhandler
     contentObjectExceptionHandler = 0
+
+    # realurl
+    absRefPrefix = /
+    tx_realurl_enable = 1
+    prefixLocalAnchors = all
 }
