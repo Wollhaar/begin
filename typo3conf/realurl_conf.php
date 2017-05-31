@@ -1,163 +1,136 @@
 <?php
-$TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT'] = array(
-     'pagePath' => array(
-          'type' => 'user',
-          'userFunc' => 'EXT:realurl/class.tx_realurl_advanced.php:&tx_realurl_advanced->main',
-          'spaceCharacter' => '-',
-          'languageGetVar' => 'L',
-          'expireDays' => 7,
-          'firstHitPathCache' => 1,
-          'segTitleFieldList' => 'tx_realurl_pathsegment,alias,nav_title,title,uid',
-     ),
-     'init' => array(
-          'appendMissingSlash' => 'ifNotFile',
-          'enableUrlDecodeCache' => TRUE,
-          'enableUrlEncodeCache' => TRUE,
-          'enableCHashCache' => TRUE,
-          'adminJumpToBackend' => TRUE,
-          'emptyUrlReturnValue' => '/',
-          'respectSimulateStaticURLs' => 0,
-     ),
-     'preVars' => array(
-          array(
-               'GETvar' => 'L',
-               'valueMap' => array(
+// $GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields'].= ',tx_realurl_pathsegment'; // Nicht mehr nötig
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl'] = array(
+    '_DEFAULT' => array(
+        'init' => array(
+            'enableCHashCache' => 1,
+            'appendMissingSlash' => 'ifNotFile',
+            'enableUrlDecodeCache' => 1,
+            'enableUrlEncodeCache' => 1,
+            'postVarSet_failureMode' => '',
+        ),
+        'redirects' => array(),
+        'preVars' => array(
+            array(
+                'GETvar' => 'no_cache',
+                'valueMap' => array(
+                    'nc' => 1,
+                ),
+                'noMatch' => 'bypass',
+            ),
+            array(
+                'GETvar' => 'L',
+                'valueMap' => array(
+                    # 'de' => '0',
                     'en' => '1',
                     'pl' => '2',
-//                    'es' => '3',
-               ),
-               'noMatch' => 'bypass',
-          ),
-          array(
-               'GETvar' => 'no_cache',
-               'valueMap' => array(
-                    'nc' => '1',
-               ),
-               'noMatch' => 'bypass',
-          ),
-     ),
-     'fileName' => array(
-          'defaultToHTMLsuffixOnPrev' => FALSE,
-          'acceptHTMLsuffix' => 1,
-          'index' => array(
-                    // news rss feed
-               'rss.xml' => array(
+                ),
+                'valueDefault' => 'de',
+                'noMatch' => 'bypass',
+            ),
+        ),
+        'pagePath' => array(
+            'type' => 'user',
+            'userFunc' => 'EXT:realurl/class.tx_realurl_advanced.php:&tx_realurl_advanced->main',
+            'spaceCharacter' => '-',
+            'languageGetVar' => 'L',
+            'expireDays' => 7,
+            'rootpage_id' => 1,
+            'firstHitPathCache' => 1,
+        ),
+        'fixedPostVars' => array(),
+        'postVarSets' => array(
+            '_DEFAULT' => array(
+                // news archive parameters
+                'archive' => array(
+                    array(
+                        'GETvar' => 'tx_ttnews[year]' ,
+                    ),
+                    array(
+                        'GETvar' => 'tx_ttnews[month]' ,
+                        'valueMap' => array(
+                            'january' => '01',
+                            'february' => '02',
+                            'march' => '03',
+                            'april' => '04',
+                            'may' => '05',
+                            'june' => '06',
+                            'july' => '07',
+                            'august' => '08',
+                            'september' => '09',
+                            'october' => '10',
+                            'november' => '11',
+                            'december' => '12',
+                        )
+                    ),
+                ),
+                // news pagebrowser
+                'browse' => array(
+                    array(
+                        'GETvar' => 'tx_ttnews[pointer]',
+                    ),
+                ),
+                // news categories
+                'select_category' => array (
+                    array(
+                        'GETvar' => 'tx_ttnews[cat]',
+                    ),
+                ),
+                // news articles and searchwords
+                'article' => array(
+                    array(
+                        'GETvar' => 'tx_ttnews[tt_news]',
+                        'lookUpTable' => array(
+                            'table' => 'tt_news',
+                            'id_field' => 'uid',
+                            'alias_field' => 'title',
+                            'addWhereClause' => ' AND NOT deleted',
+                            'useUniqueCache' => 1,
+                            'useUniqueCache_conf' => array(
+                                'strtolower' => 1,
+                                'spaceCharacter' => '-',
+                            ),
+                        ),
+                    ),
+                    array(
+                        'GETvar' => 'tx_ttnews[backPid]',
+                    ),
+                    array(
+                        'GETvar' => 'tx_ttnews[swords]',
+                    ),
+                ),
+            ),
+        ),
+        // configure filenames for different pagetypes
+        'fileName' => array(
+            'defaultToHTMLsuffixOnPrev' => 0,
+            'index' => array(
+                'print.html' => array(
                     'keyValues' => array(
-                         'type' => 9818,
+                        'type' => 98,
                     ),
-               ),
-                    // tq_seo
-               'sitemap.txt' => array(
+                ),
+                'rss.xml' => array(
                     'keyValues' => array(
-                         'type' => 841131,
+                        'type' => 100,
                     ),
-               ),
-               'sitemap.xml' => array(
+                ),
+                'rss091.xml' => array(
                     'keyValues' => array(
-                         'type' => 841132,
+                        'type' => 101,
                     ),
-               ),
-               'robots.txt' => array(
+                ),
+                'rdf.xml' => array(
                     'keyValues' => array(
-                         'type' => 841133,
+                        'type' => 102,
                     ),
-               ),
-          ),
-     ),
-     'fixedPostVars' => array(
-          // EXT:news start
-          'newsDetailConfiguration' => array(
-               array(
-                    'GETvar' => 'tx_news_pi1[action]',
-                    'valueMap' => array(
-                         'detail' => '',
-                    ),
-                    'noMatch' => 'bypass'
-               ),
-               array(
-                    'GETvar' => 'tx_news_pi1[controller]',
-                    'valueMap' => array(
-                         'News' => '',
-                    ),
-                    'noMatch' => 'bypass'
-               ),
-               array(
-                    'GETvar' => 'tx_news_pi1[news]',
-                    'lookUpTable' => array(
-                         'table' => 'tx_news_domain_model_news',
-                         'id_field' => 'uid',
-                         'alias_field' => 'title',
-                         'addWhereClause' => ' AND NOT deleted',
-                         'useUniqueCache' => 1,
-                         'useUniqueCache_conf' => array(
-                              'strtolower' => 1,
-                              'spaceCharacter' => '-'
-                         ),
-                         'languageGetVar' => 'L',
-                         'languageExceptionUids' => '',
-                         'languageField' => 'sys_language_uid',
-                         'transOrigPointerField' => 'l10n_parent',
-                         'autoUpdate' => 1,
-                         'expireDays' => 180,
-                    )
-               )
-          ),
-          'newsCategoryConfiguration' => array(
-               array(
-                    'GETvar' => 'tx_news_pi1[overwriteDemand][categories]',
-                    'lookUpTable' => array(
-                         'table' => 'sys_category',
-                         'id_field' => 'uid',
-                         'alias_field' => 'title',
-                         'addWhereClause' => ' AND NOT deleted',
-                         'useUniqueCache' => 1,
-                         'useUniqueCache_conf' => array(
-                              'strtolower' => 1,
-                              'spaceCharacter' => '-'
-                         )
-                    )
-               )
-          ),
-          'newsTagConfiguration' => array(
-               array(
-                    'GETvar' => 'tx_news_pi1[overwriteDemand][tags]',
-                    'lookUpTable' => array(
-                         'table' => 'tx_news_domain_model_tag',
-                         'id_field' => 'uid',
-                         'alias_field' => 'title',
-                         'addWhereClause' => ' AND NOT deleted',
-                         'useUniqueCache' => 1,
-                         'useUniqueCache_conf' => array(
-                              'strtolower' => 1,
-                              'spaceCharacter' => '-'
-                         )
-                    )
-               )
-          ),
-          // EXT:news end
-     ),
-     'postVarSets' => array(
-          '_DEFAULT' => array(
-               /*
-               'forgot' => array(
-                    'type' => 'single',
+                ),
+                'atom.xml' => array(
                     'keyValues' => array(
-                         'tx_felogin_pi1[forgot]' => 1,
+                        'type' => 103,
                     ),
-               ),
-               */
-          ),
-     ),
+                ),
+            ),
+        ),
+    ),
 );
-
-## Domain und rootpage_id anpassen
-$TYPO3_CONF_VARS['EXTCONF']['realurl']['begin.david.exinitdev.de'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT'];
-$TYPO3_CONF_VARS['EXTCONF']['realurl']['begin.david.exinitdev.de']['pagePath']['rootpage_id'] = 2;
-
-## In der folgenden Zeile die ID der News-Detail-Seite angeben
-## Falls mehrere Detail-Seiten verwendet werden, die Zeile kopieren und ID anpassen
-## News-Artikel
-$TYPO3_CONF_VARS['EXTCONF']['realurl']['begin.david.exinitdev.de']['fixedPostVars']['11'] = 'newsDetailConfiguration';
-
-## weitere Detail-Seite
-$TYPO3_CONF_VARS['EXTCONF']['realurl']['begin.david.exinitdev.de']['fixedPostVars']['2'] = 'newsDetailConfiguration';
