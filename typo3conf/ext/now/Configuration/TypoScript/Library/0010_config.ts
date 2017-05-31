@@ -12,4 +12,17 @@ config {
     absRefPrefix = /
     tx_realurl_enable = 1
     prefixLocalAnchors = all
+
+    # spamschutz
+    spamProtectEmailAddresses = 2
+    spamProtectEmailAddresses_lastDotSubst = (punkt)
+
+    # komprimierung
+    concatenateCss = 1
+    compressCss = 1
+
+    concatenateJs = 1
+    compressJs = 1
+
+    disablePrefixComment = 1
 }
