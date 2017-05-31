@@ -134,3 +134,15 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl'] = array(
         ),
     ),
 );
+
+## Domain und rootpage_id anpassen
+$TYPO3_CONF_VARS['EXTCONF']['realurl']['begin.david.exinitdev.de'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT'];
+$TYPO3_CONF_VARS['EXTCONF']['realurl']['begin.david.exinitdev.de']['pagePath']['rootpage_id'] = 2;
+
+## In der folgenden Zeile die ID der News-Detail-Seite angeben
+## Falls mehrere Detail-Seiten verwendet werden, die Zeile kopieren und ID anpassen
+## News-Artikel
+$TYPO3_CONF_VARS['EXTCONF']['realurl']['begin.david.exinitdev.de']['fixedPostVars']['11'] = 'newsDetailConfiguration';
+
+## weitere Detail-Seite
+$TYPO3_CONF_VARS['EXTCONF']['realurl']['begin.david.exinitdev.de']['fixedPostVars']['2'] = 'newsDetailConfiguration';
