@@ -25,4 +25,8 @@ config {
     compressJs = 1
 
     disablePrefixComment = 1
+
+    # website titel
+    pageTitleSeparator = |
+    pageTitleSeparator.noTrimWrap = | | |
 }
