@@ -19,4 +19,13 @@ class ClubRepository extends Repository
         'numberOfFans' => QueryInterface::ORDER_DESCENDING,
         'name' => QueryInterface::ORDER_ASCENDING,
         ];
+
+
+    public function findClubsWithoutFans(){
+        $query = $this->createQuery();
+        $query->matching(
+            $query->equals('numberOfFans', 0)
+        );
+        return $query->execute();
+    }
 }
