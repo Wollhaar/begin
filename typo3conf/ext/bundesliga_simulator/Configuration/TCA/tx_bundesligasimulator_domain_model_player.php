@@ -146,7 +146,7 @@ return [
             'label'   => $ll . '.age',
             'config'  => [
                 'type' => 'input',
-                'size' => 20,
+                'size' => 2,
                 'eval' => 'trim, num',
             ],
         ],
@@ -155,8 +155,17 @@ return [
             'label'   => $ll . '.country',
             'config'  => [
                 'type' => 'input',
-                'size' => 2,
+                'size' => 20,
                 'eval' => 'trim',
+            ],
+        ],
+        'transfer_fee' => [
+            'exclude' => 0,
+            'label'   => $ll . '.transfer_fee',
+            'config'  => [
+                'type' => 'input',
+                'size' => 20,
+                'eval' => 'trim, num',
             ],
         ],
     ],
