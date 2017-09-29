@@ -44,8 +44,9 @@ CREATE TABLE tx_bundesligasimulator_domain_model_player (
 
 	first_name varchar(255) DEFAULT '' NOT NULL,
 	last_name varchar(255) DEFAULT '' NOT NULL,
-  age int(11) unsigned DEFAULT '0' NOT NULL,
+  age int(2) unsigned DEFAULT '0' NOT NULL,
 	country varchar(255) DEFAULT '' NOT NULL,
+	transfer_fee int(11) unsigned DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
