@@ -1,0 +1,15 @@
+Transferliste - Periode: Sommer
+
+<f:if condition="{players}">
+    <h3>Aktuelle Spielerwechsel</h3>
+    <table>
+        <f:for each="{players}" as="player">
+            <tr>
+                <td>{player.first_name} {player.last_name}</td>
+                <td>{player.age}</td>
+                <td>{player.country}</td>
+                <td>{player.transfer_fee}</td>
+            </tr>
+        </f:for>
+    </table>
+</f:if>
