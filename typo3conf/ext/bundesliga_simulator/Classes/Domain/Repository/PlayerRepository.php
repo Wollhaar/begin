@@ -20,5 +20,6 @@ class PlayerRepository extends Repository
         'first_name' => QueryInterface::ORDER_ASCENDING,
         'country' => QueryInterface::ORDER_ASCENDING,
         'age' => QueryInterface::ORDER_ASCENDING,
+        'transfer_fee' => QueryInterface::ORDER_ASCENDING,
     ];
 }
