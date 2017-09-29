@@ -28,29 +28,27 @@ namespace Exinit\BundesligaSimulator\Controller;
  ***************************************************************/
 
 use Exinit\BundesligaSimulator\Domain\Repository\ClubRepository;
-use Exinit\BundesligaSimulator\Domain\Repository\PlayerRepository;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 class LeagueController extends ActionController
 {
     protected $clubRepository;
-    protected $playerRepository;
 
-    public function __construct(ClubRepository $clubRepository, PlayerRepository $playerRepository)
+    public function __construct(ClubRepository $clubRepository)
     {
         parent::__construct();
         $this->clubRepository = $clubRepository;
-        $this->playerRepository = $playerRepository;
     }
 
     public function listAction()
     {
         $clubs = $this->clubRepository->findAll();
-        $players = $this->playerRepository->findAll();
+        $noobs = $this->clubRepository->findClubsWithoutFans();
         $this->view->assignMultiple([
             'clubs' => $clubs,
-            'players' => $players
+            'noobs' => $noobs
         ]);
     }
+
 
 }
