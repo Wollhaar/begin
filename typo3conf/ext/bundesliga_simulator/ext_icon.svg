@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="47.109638mm"
+   height="47.219276mm"
+   viewBox="0 0 166.92391 167.3124"
+   id="svg4396"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="e-like-exinit.svg">
+  <title
+     id="title3338">e exinit-Logo</title>
+  <defs
+     id="defs4398" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.959798"
+     inkscape:cx="93.666546"
+     inkscape:cy="75.767851"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showborder="false"
+     inkscape:showpageshadow="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     borderlayer="true" />
+  <metadata
+     id="metadata4401">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>e exinit-Logo</dc:title>
+        <dc:date>21.05.2015</dc:date>
+        <dc:description>Perfect cut by Christian Müller</dc:description>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-157.08857,-671.34156)">
+    <path
+       d="m -744.4514,1707.6149 c -26.965,0 -44.624,-16.945 -44.624,-42.233 l 0,-29.595 c 0,-7.396 2.387,-15.509 6.681,-21.952 8.595,-12.89 22.431,-20.286 37.943,-20.286 8.548,0 16.722,2.32 23.729,6.622 -0.721,-0.976 -1.451,-1.949 -2.22,-2.907 -29.035,-36.21 -80.055,-42.448 -116.955,-12.858 -36.208,29.031 -41.892,80.738 -12.856,116.947 29.586,36.892 80.742,41.888 116.947,12.856 3.879,-3.11 7.391,-6.464 10.573,-9.995 -5.44,2.237 -11.855,3.401 -19.218,3.401 z"
+       id="path3345"
+       inkscape:connector-curvature="0"
+       style="fill:#009cd1" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -704.35854,1657.5112 0,76.7617 -168.42578,0 0,-175.25 167.75,0 z"
+       id="path4527"
+       inkscape:connector-curvature="0" />
+    <path
+       d="m 269.12549,763.2049 c -1.667,0 -2.383,0.715 -2.383,2.383 l 0,5.493 c 0,9.544 7.156,17.176 17.18,17.176 6.921,0 11.218,-3.816 15.271,-11.454 1.437,-2.865 2.387,-4.535 3.586,-4.535 0.474,0 0.708,0 1.187,0.245 l 16.355,8.079 c 1.882,-5.666 3.116,-11.491 3.691,-17.387 l -54.887,0 z"
+       id="path3343"
+       inkscape:connector-curvature="0"
+       style="fill:#009cd1" />
+    <path
+       d="m 283.92149,813.3139 c -26.965,0 -44.624,-16.945 -44.624,-42.233 l 0,-29.595 c 0,-7.396 2.387,-15.509 6.681,-21.952 8.595,-12.89 22.431,-20.286 37.943,-20.286 8.548,0 16.722,2.32 23.729,6.622 -0.721,-0.976 -1.451,-1.949 -2.22,-2.907 -29.035,-36.21 -80.055,-42.448 -116.955,-12.858 -36.208,29.031 -41.892,80.738 -12.856,116.947 29.586,36.892 80.742,41.888 116.947,12.856 3.879,-3.11 7.391,-6.464 10.573,-9.995 -5.44,2.237 -11.855,3.401 -19.218,3.401 z"
+       id="path3345-0"
+       inkscape:connector-curvature="0"
+       style="fill:#009cd1" />
+    <path
+       d="m 269.60349,740.2939 28.398,0 c 1.67,0 2.387,-0.713 2.387,-2.383 0,-6.447 -7.872,-13.604 -16.467,-13.604 -9.067,0 -16.705,7.156 -16.705,13.839 10e-4,1.434 0.717,2.148 2.387,2.148 z"
+       id="path3347"
+       inkscape:connector-curvature="0"
+       style="fill:#009cd1" />
+  </g>
+</svg>
