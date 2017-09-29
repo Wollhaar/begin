@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+<file source-language="de" datatype="plaintext" original="messages" product-name="Bundesliga Simulator">
+    <header />
+    <body>
+        <!--   Der Verein   -->
+        <trans-unit id="tx_bundesligasimulator_domain_model_club" xml:space="preserve">
+            <source>Verein</source>
+        </trans-unit>
+
+        <trans-unit id="tx_bundesligasimulator_domain_model_club.name" xml:space="preserve">
+            <source>Name</source>
+        </trans-unit>
+
+        <trans-unit id="tx_bundesligasimulator_domain_model_club.numberOfFans" xml:space="preserve">
+            <source>Anzahl der Fans</source>
+        </trans-unit>
+
+
+        <!--  Spielerprofil   -->
+        <trans-unit id="tx_bundesligasimulator_domain_model_player" xml:space="preserve">
+            <source>Spieler</source>
+        </trans-unit>
+
+        <trans-unit id="tx_bundesligasimulator_domain_model_player.first_name" xml:space="preserve">
+            <source>Vorname</source>
+        </trans-unit>
+
+        <trans-unit id="tx_bundesligasimulator_domain_model_player.last_name" xml:space="preserve">
+            <source>Nachname</source>
+        </trans-unit>
+        <trans-unit id="tx_bundesligasimulator_domain_model_player.age" xml:space="preserve">
+            <source>Alter</source>
+        </trans-unit>
+
+        <trans-unit id="tx_bundesligasimulator_domain_model_player.country" xml:space="preserve">
+            <source>Land</source>
+        </trans-unit>
+
+        <trans-unit id="tx_bundesligasimulator_domain_model_player.transfer_fee" xml:space="preserve">
+            <source>Ablösesumme</source>
+        </trans-unit>
+    </body>
+</file>
+</xliff>
