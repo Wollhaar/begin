@@ -33,12 +33,17 @@ class Player extends AbstractEntity
      */
     protected $country;
 
+    /**
+     * @var int
+     */
+    protected $transfer_fee;
+
 
 
     /**
      * @return string
      */
-    public function getFirstName(): string
+    public function getFirstName()
     {
         return $this->first_name;
     }
@@ -46,7 +51,7 @@ class Player extends AbstractEntity
     /**
      * @param string $first_name
      */
-    public function setFirstName(string $first_name)
+    public function setFirstName($first_name)
     {
         $this->first_name = $first_name;
     }
@@ -54,7 +59,7 @@ class Player extends AbstractEntity
     /**
      * @return string
      */
-    public function getLastName(): string
+    public function getLastName()
     {
         return $this->last_name;
     }
@@ -62,7 +67,7 @@ class Player extends AbstractEntity
     /**
      * @param string $last_name
      */
-    public function setLastName(string $last_name)
+    public function setLastName($last_name)
     {
         $this->last_name = $last_name;
     }
@@ -70,7 +75,7 @@ class Player extends AbstractEntity
     /**
      * @return int
      */
-    public function getAge(): int
+    public function getAge()
     {
         return $this->age;
     }
@@ -78,7 +83,7 @@ class Player extends AbstractEntity
     /**
      * @param int $age
      */
-    public function setAge(int $age)
+    public function setAge($age)
     {
         $this->age = $age;
     }
@@ -86,7 +91,7 @@ class Player extends AbstractEntity
     /**
      * @return string
      */
-    public function getCountry(): string
+    public function getCountry()
     {
         return $this->country;
     }
@@ -94,10 +99,27 @@ class Player extends AbstractEntity
     /**
      * @param string $country
      */
-    public function setCountry(string $country)
+    public function setCountry($country)
     {
         $this->country = $country;
     }
+
+    /**
+     * @return int
+     */
+    public function getTransferFee()
+    {
+        return $this->transfer_fee;
+    }
+
+    /**
+     * @param int $transfer_fee
+     */
+    public function setTransferFee($transfer_fee)
+    {
+        $this->transfer_fee = $transfer_fee;
+    }
+
 
 
 }
