@@ -18,7 +18,7 @@ if (!defined('TYPO3_MODE')) {
     'Exinit.BundesligaSimulator',
     'transfermarket',
     [
-        'Player' => 'list',
+        'Transfer' => 'list',
     ],
     // non-cacheable actions
     [
