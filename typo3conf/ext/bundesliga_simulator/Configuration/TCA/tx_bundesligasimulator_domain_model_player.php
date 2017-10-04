@@ -5,7 +5,7 @@ if (!defined('TYPO3_MODE')) {
     die ('Access denied.');
 }
 
-$fieldList = 'first_name, last_name, age, country';
+$fieldList = 'first_name, last_name, age, country, transfer_fee';
 $ll = 'LLL:EXT:bundesliga_simulator/Resources/Private/Language/locallang_be.xlf:tx_bundesligasimulator_domain_model_player';
 
 return [
