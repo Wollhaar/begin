@@ -13,3 +13,7 @@ Transferliste - Periode: Sommer
         </f:for>
     </table>
 </f:if>
+
+<f:if condition="{transfer}">
+    <p>Der höchste Transfer der aktuellen Transferphase, ist der Spieler {transfer.lastName} für {transfer.transferFee}</p>
+</f:if>
