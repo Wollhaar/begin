@@ -16,12 +16,12 @@ class Player extends AbstractEntity
     /**
      * @var string
      */
-    protected $first_name;
+    protected $firstName;
 
     /**
      * @var string
      */
-    protected $last_name;
+    protected $lastName;
 
     /**
      * @var int
@@ -36,7 +36,7 @@ class Player extends AbstractEntity
     /**
      * @var int
      */
-    protected $transfer_fee;
+    protected $transferFee;
 
 
 
@@ -45,7 +45,7 @@ class Player extends AbstractEntity
      */
     public function getFirstName()
     {
-        return $this->first_name;
+        return $this->firstName;
     }
 
     /**
@@ -53,7 +53,7 @@ class Player extends AbstractEntity
      */
     public function setFirstName($first_name)
     {
-        $this->first_name = $first_name;
+        $this->firstName = $first_name;
     }
 
     /**
@@ -61,7 +61,7 @@ class Player extends AbstractEntity
      */
     public function getLastName()
     {
-        return $this->last_name;
+        return $this->lastName;
     }
 
     /**
@@ -69,7 +69,7 @@ class Player extends AbstractEntity
      */
     public function setLastName($last_name)
     {
-        $this->last_name = $last_name;
+        $this->lastName = $last_name;
     }
 
     /**
@@ -109,7 +109,7 @@ class Player extends AbstractEntity
      */
     public function getTransferFee()
     {
-        return $this->transfer_fee;
+        return $this->transferFee;
     }
 
     /**
