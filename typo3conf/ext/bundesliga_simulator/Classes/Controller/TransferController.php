@@ -30,7 +30,7 @@ namespace Exinit\BundesligaSimulator\Controller;
 use Exinit\BundesligaSimulator\Domain\Repository\PlayerRepository;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
-class LeagueController extends ActionController
+class TransferController extends ActionController
 {
     protected $playerRepository;
 
@@ -44,7 +44,7 @@ class LeagueController extends ActionController
     {
         $players = $this->playerRepository->findAll();
         $this->view->assignMultiple([
-            'players' => $players
+            'players' => $players,
         ]);
     }
 
