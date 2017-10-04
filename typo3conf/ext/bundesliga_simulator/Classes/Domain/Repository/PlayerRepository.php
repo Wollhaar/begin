@@ -10,16 +10,16 @@ declare(strict_types=1);
 namespace Exinit\BundesligaSimulator\Domain\Repository;
 
 
-use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 use TYPO3\CMS\Extbase\Persistence\Repository;
+use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 
 class PlayerRepository extends Repository
 {
     protected $defaultOrderings = [
-        'last_name' => QueryInterface::ORDER_ASCENDING,
-        'first_name' => QueryInterface::ORDER_ASCENDING,
+        'transferFee' => QueryInterface::ORDER_DESCENDING,
+        'lastName' => QueryInterface::ORDER_ASCENDING,
+        'firstName' => QueryInterface::ORDER_ASCENDING,
         'country' => QueryInterface::ORDER_ASCENDING,
         'age' => QueryInterface::ORDER_ASCENDING,
-        'transfer_fee' => QueryInterface::ORDER_ASCENDING,
     ];
 }
