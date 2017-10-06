@@ -43,10 +43,22 @@ class TransferController extends ActionController
     public function listAction()
     {
         $players = $this->playerRepository->findAll();
+        $highestTransfer = $this->playerRepository->highestTransfer();
         $this->view->assignMultiple([
             'players' => $players,
+            'transfer' => $highestTransfer,
         ]);
     }
 
+    public function showAction($playerId)
+    {
+        $onePlayer = $this->playerRepository->findSinglePlayer($playerId);
+        echo '<pre>';
+        var_dump($onePlayer);
+        echo '</pre>';
+        $this->view->assignMultiple([
+            'player' => $onePlayer
+        ]);
+    }
 
 }
