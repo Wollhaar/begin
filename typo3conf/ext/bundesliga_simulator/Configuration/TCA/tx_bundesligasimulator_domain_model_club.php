@@ -5,7 +5,7 @@ if (!defined('TYPO3_MODE')) {
     die ('Access denied.');
 }
 
-$fieldList = 'name, number_of_fans';
+$fieldList = 'name, founding_year, stadium_name, stadium_capacity, total_market_value, number_of_fans';
 $ll = 'LLL:EXT:bundesliga_simulator/Resources/Private/Language/locallang_be.xlf:tx_bundesligasimulator_domain_model_club';
 
 return [
@@ -130,6 +130,42 @@ return [
                 'type' => 'input',
                 'size' => 20,
                 'eval' => 'trim',
+            ],
+        ],
+        'founding_year' => [
+        'exclude' => 0,
+        'label'   => $ll . '.founding_year',
+        'config'  => [
+            'type' => 'input',
+            'size' => 4,
+            'eval' => 'trim, num',
+            ],
+        ],
+        'stadium_name'           => [
+            'exclude' => 0,
+            'label'   => $ll . '.stadium_name',
+            'config'  => [
+                'type' => 'input',
+                'size' => 20,
+                'eval' => 'trim',
+            ],
+        ],
+        'stadium_capacity' => [
+            'exclude' => 0,
+            'label'   => $ll . '.stadium_capacity',
+            'config'  => [
+                'type' => 'input',
+                'size' => 20,
+                'eval' => 'trim, num',
+            ],
+        ],
+        'total_market_value' => [
+            'exclude' => 0,
+            'label'   => $ll . '.total_market_value',
+            'config'  => [
+                'type' => 'input',
+                'size' => 20,
+                'eval' => 'trim, num',
             ],
         ],
         'number_of_fans' => [
