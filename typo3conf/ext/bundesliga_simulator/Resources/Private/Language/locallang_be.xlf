@@ -11,7 +11,18 @@
         <trans-unit id="tx_bundesligasimulator_domain_model_club.name" xml:space="preserve">
             <source>Name</source>
         </trans-unit>
-
+        <trans-unit id="tx_bundesligasimulator_domain_model_club.founding_year" xml:space="preserve">
+            <source>Gründungsjahr</source>
+        </trans-unit>
+        <trans-unit id="tx_bundesligasimulator_domain_model_club.stadium_name" xml:space="preserve">
+            <source>Name des Stadions</source>
+        </trans-unit>
+        <trans-unit id="tx_bundesligasimulator_domain_model_club.stadium_capacity" xml:space="preserve">
+            <source>Kapazität des Stadions</source>
+        </trans-unit>
+        <trans-unit id="tx_bundesligasimulator_domain_model_club.total_market_value" xml:space="preserve">
+            <source>Gesamtmarktwert des Vereins</source>
+        </trans-unit>
         <trans-unit id="tx_bundesligasimulator_domain_model_club.numberOfFans" xml:space="preserve">
             <source>Anzahl der Fans</source>
         </trans-unit>
@@ -22,22 +33,35 @@
             <source>Spieler</source>
         </trans-unit>
 
-        <trans-unit id="tx_bundesligasimulator_domain_model_player.firstName" xml:space="preserve">
+        <trans-unit id="tx_bundesligasimulator_domain_model_player.first_name" xml:space="preserve">
             <source>Vorname</source>
         </trans-unit>
 
-        <trans-unit id="tx_bundesligasimulator_domain_model_player.lastName" xml:space="preserve">
+        <trans-unit id="tx_bundesligasimulator_domain_model_player.last_name" xml:space="preserve">
             <source>Nachname</source>
+        </trans-unit>
+        <trans-unit id="tx_bundesligasimulator_domain_model_player.birthday" xml:space="preserve">
+            <source>Geburtstag</source>
         </trans-unit>
         <trans-unit id="tx_bundesligasimulator_domain_model_player.age" xml:space="preserve">
             <source>Alter</source>
         </trans-unit>
-
-        <trans-unit id="tx_bundesligasimulator_domain_model_player.country" xml:space="preserve">
-            <source>Land</source>
+        <trans-unit id="tx_bundesligasimulator_domain_model_player.height" xml:space="preserve">
+            <source>Größe</source>
         </trans-unit>
-
-        <trans-unit id="tx_bundesligasimulator_domain_model_player.transferFee" xml:space="preserve">
+        <trans-unit id="tx_bundesligasimulator_domain_model_player.nationality" xml:space="preserve">
+            <source>Nationalität</source>
+        </trans-unit>
+        <trans-unit id="tx_bundesligasimulator_domain_model_player.position" xml:space="preserve">
+            <source>Position</source>
+        </trans-unit>
+        <trans-unit id="tx_bundesligasimulator_domain_model_player.club" xml:space="preserve">
+            <source>Aktueller Verein</source>
+        </trans-unit>
+        <trans-unit id="tx_bundesligasimulator_domain_model_player.contract" xml:space="preserve">
+            <source>Vertragsende</source>
+        </trans-unit>
+        <trans-unit id="tx_bundesligasimulator_domain_model_player.transfer_fee" xml:space="preserve">
             <source>Ablösesumme</source>
         </trans-unit>
     </body>
