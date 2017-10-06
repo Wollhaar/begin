@@ -16,6 +16,11 @@ class Player extends AbstractEntity
     /**
      * @var string
      */
+    protected  $uid;
+
+    /**
+     * @var string
+     */
     protected $firstName;
 
     /**
@@ -24,14 +29,39 @@ class Player extends AbstractEntity
     protected $lastName;
 
     /**
+     * @var string
+     */
+    protected $birthday;
+
+    /**
      * @var int
      */
     protected $age;
 
     /**
+     * @var int
+     */
+    protected $height;
+
+    /**
      * @var string
      */
-    protected $country;
+    protected $nationality;
+
+    /**
+     * @var string
+     */
+    protected $position;
+
+    /**
+     * @var string
+     */
+    protected $club;
+
+    /**
+     * @var string
+     */
+    protected $contract;
 
     /**
      * @var int
@@ -39,6 +69,22 @@ class Player extends AbstractEntity
     protected $transferFee;
 
 
+
+    /**
+     * @return int
+     */
+    public function getUid()
+    {
+        return $this->uid;
+    }
+
+    /**
+     * @param int $uid
+     */
+    public function setUid($uid)
+    {
+        $this->uid = $uid;
+    }
 
     /**
      * @return string
@@ -73,6 +119,22 @@ class Player extends AbstractEntity
     }
 
     /**
+     * @return string
+     */
+    public function getBirthday()
+    {
+        return $this->birthday;
+    }
+
+    /**
+     * @param string $birthday
+     */
+    public function setBirthday($birthday)
+    {
+        $this->birthday = $birthday;
+    }
+
+    /**
      * @return int
      */
     public function getAge()
@@ -89,19 +151,83 @@ class Player extends AbstractEntity
     }
 
     /**
+     * @return int
+     */
+    public function getHeight()
+    {
+        return $this->height;
+    }
+
+    /**
+     * @param int $height
+     */
+    public function setHeight($height)
+    {
+        $this->height = $height;
+    }
+
+    /**
      * @return string
      */
-    public function getCountry()
+    public function getNationality()
     {
-        return $this->country;
+        return $this->nationality;
     }
 
     /**
      * @param string $country
      */
-    public function setCountry($country)
+    public function setNationality($nationality)
     {
-        $this->country = $country;
+        $this->nationality = $nationality;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPosition()
+    {
+        return $this->position;
+    }
+
+    /**
+     * @param mixed $position
+     */
+    public function setPosition($position)
+    {
+        $this->position = $position;
+    }
+
+    /**
+     * @return string
+     */
+    public function getClub()
+    {
+        return $this->club;
+    }
+
+    /**
+     * @param string $club
+     */
+    public function setClub($club)
+    {
+        $this->club = $club;
+    }
+
+    /**
+     * @return string
+     */
+    public function getContract()
+    {
+        return $this->contract;
+    }
+
+    /**
+     * @param string $contract
+     */
+    public function setContract($contract)
+    {
+        $this->contract = $contract;
     }
 
     /**
