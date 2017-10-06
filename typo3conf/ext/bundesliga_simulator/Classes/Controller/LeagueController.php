@@ -50,5 +50,11 @@ class LeagueController extends ActionController
         ]);
     }
 
-
+    public function showAction($clubID)
+    {
+        $singleClub = $this->clubRepository->findSingleClub($clubID);
+        $this->view->assignMultiple([
+            'club' => $singleClub,
+        ]);
+    }
 }
