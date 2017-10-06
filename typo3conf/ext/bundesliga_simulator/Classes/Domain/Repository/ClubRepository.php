@@ -28,4 +28,14 @@ class ClubRepository extends Repository
         );
         return $query->execute();
     }
+
+    public function findSingleClub($club)
+    {
+        $query = $this->createQuery();
+        $query->matching(
+            $query->equals('uid', $club)
+        );
+
+        return $query->execute();
+    }
 }
