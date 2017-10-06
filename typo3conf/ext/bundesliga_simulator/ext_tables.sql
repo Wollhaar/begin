@@ -4,6 +4,10 @@ CREATE TABLE tx_bundesligasimulator_domain_model_club (
 	pid int(11) DEFAULT '0' NOT NULL,
 
 	name varchar(255) DEFAULT '' NOT NULL,
+	founding_year tinyint(4) unsigned DEFAULT '0' NOT NULL,
+	stadium_name varchar(255) DEFAULT '' NOT NULL,
+  stadium_capacity int(11) unsigned DEFAULT '0' NOT NULL,
+  total_market_value int(11) unsigned DEFAULT '0' NOT NULL,
   number_of_fans int(11) unsigned DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
@@ -44,8 +48,13 @@ CREATE TABLE tx_bundesligasimulator_domain_model_player (
 
 	first_name varchar(255) DEFAULT '' NOT NULL,
 	last_name varchar(255) DEFAULT '' NOT NULL,
-  age int(2) unsigned DEFAULT '0' NOT NULL,
-	country varchar(255) DEFAULT '' NOT NULL,
+  birthday int(11) unsigned DEFAULT '0' NOT NULL,
+  age tinyint(2) unsigned DEFAULT '0' NOT NULL,
+	height int(3) unsigned DEFAULT '0' NOT NULL,
+	nationality varchar(255) DEFAULT '' NOT NULL,
+	position varchar(255) DEFAULT '' NOT NULL,
+	club varchar(255) DEFAULT '' NOT NULL,
+	contract int(11) unsigned DEFAULT '0' NOT NULL,
 	transfer_fee int(11) unsigned DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
