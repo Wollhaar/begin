@@ -5,15 +5,14 @@ Transferliste - Periode: Sommer
     <table>
         <f:for each="{players}" as="player">
             <tr>
-                <td>{player.first_name} {player.last_name}</td>
-                <td>{player.age}</td>
-                <td>{player.country}</td>
-                <td>{player.transfer_fee}</td>
+                <td>{player.firstName} {player.lastName}</td>
+                <td>{player.transferFee}</td>
+                <td><f:link.action action="show" arguments="{player: player.uid}">Profil</f:link.action></td>
             </tr>
         </f:for>
     </table>
 </f:if>
 
 <f:if condition="{transfer}">
-    <p>Der höchste Transfer der aktuellen Transferphase, ist der Spieler {transfer.lastName} für {transfer.transferFee}</p>
+    <p>Der höchste Transfer der aktuellen Transferphase, ist der Spieler {transfer.lastName} für {transfer.transferFee} zum {transfer.club}.</p>
 </f:if>
