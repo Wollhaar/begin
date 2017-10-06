@@ -5,17 +5,17 @@ if (!defined('TYPO3_MODE')) {
     die ('Access denied.');
 }
 
-$fieldList = 'first_name, last_name, age, country, transfer_fee';
+$fieldList = 'first_name, last_name, birthday, age, height, nationality, position, club, contract, transfer_fee';
 $ll = 'LLL:EXT:bundesliga_simulator/Resources/Private/Language/locallang_be.xlf:tx_bundesligasimulator_domain_model_player';
 
 return [
     'ctrl'      => [
         'title'                    => $ll,
-        'label'                    => 'name',
+        'label'                    => 'last_name',
         'tstamp'                   => 'tstamp',
         'crdate'                   => 'crdate',
         'cruser_id'                => 'cruser_id',
-        'default_sortby'           => 'ORDER BY name',
+        'default_sortby'           => 'ORDER BY last_name',
         'dividers2tabs'            => true,
         'versioningWS'             => 2,
         'versioning_followPages'   => true,
@@ -29,7 +29,7 @@ return [
             'starttime' => 'starttime',
             'endtime'   => 'endtime',
         ],
-        'searchFields'             => 'name',
+        'searchFields'             => 'last_name',
         'iconfile'                 => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('bundesliga_simulator') . 'Resources/Public/Icons/tx_bundesligasimulator_domain_model_player.gif',
     ],
     'interface' => [
@@ -123,6 +123,15 @@ return [
             ],
         ],
 
+        'uid'           => [
+            'exclude' => 0,
+            'label'   => $ll . '.uid',
+            'config'  => [
+                'type' => 'input',
+                'size' => 11,
+                'eval' => 'trim',
+            ],
+        ],
         'first_name'           => [
             'exclude' => 0,
             'label'   => $ll . '.first_name',
@@ -141,6 +150,15 @@ return [
                 'eval' => 'trim',
             ],
         ],
+        'birthday' => [
+            'exclude' => 0,
+            'label'   => $ll . '.birthday',
+            'config'  => [
+                'type' => 'input',
+                'size' => 10,
+                'eval' => 'trim, date',
+            ],
+        ],
         'age' => [
             'exclude' => 0,
             'label'   => $ll . '.age',
@@ -150,13 +168,49 @@ return [
                 'eval' => 'trim, num',
             ],
         ],
-        'country' => [
+        'height' => [
             'exclude' => 0,
-            'label'   => $ll . '.country',
+            'label'   => $ll . '.height',
+            'config'  => [
+                'type' => 'input',
+                'size' => 3,
+                'eval' => 'trim, num',
+            ],
+        ],
+        'nationality' => [
+            'exclude' => 0,
+            'label'   => $ll . '.nationality',
             'config'  => [
                 'type' => 'input',
                 'size' => 20,
                 'eval' => 'trim',
+            ],
+        ],
+        'position' => [
+            'exclude' => 0,
+            'label'   => $ll . '.position',
+            'config'  => [
+                'type' => 'input',
+                'size' => 20,
+                'eval' => 'trim',
+            ],
+        ],
+        'club' => [
+            'exclude' => 0,
+            'label'   => $ll . '.club',
+            'config'  => [
+                'type' => 'input',
+                'size' => 20,
+                'eval' => 'trim',
+            ],
+        ],
+        'contract' => [
+            'exclude' => 0,
+            'label'   => $ll . '.contract',
+            'config'  => [
+                'type' => 'input',
+                'size' => 10,
+                'eval' => 'trim, date',
             ],
         ],
         'transfer_fee' => [
