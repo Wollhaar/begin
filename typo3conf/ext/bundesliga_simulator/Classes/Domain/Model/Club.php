@@ -40,7 +40,29 @@ class Club extends AbstractEntity
     /**
      * @var int
      */
+    protected $foundingYear;
+
+    /**
+     * @var string
+     */
+    protected $stadiumName;
+
+    /**
+     * @var int
+     */
+    protected $stadiumCapacity;
+
+    /**
+     * @var int
+     */
+    protected $totalMarketValue;
+
+    /**
+     * @var int
+     */
     protected $numberOfFans;
+
+
 
     /**
      * @return string
@@ -56,6 +78,70 @@ class Club extends AbstractEntity
     public function setName($name)
     {
         $this->name = $name;
+    }
+
+    /**
+     * @return int
+     */
+    public function getFoundingYear()
+    {
+        return $this->foundingYear;
+    }
+
+    /**
+     * @param int $foundingYear
+     */
+    public function setFoundingYear($foundingYear)
+    {
+        $this->foundingYear = $foundingYear;
+    }
+
+    /**
+     * @return string
+     */
+    public function getStadiumName()
+    {
+        return $this->stadiumName;
+    }
+
+    /**
+     * @param string $stadiumName
+     */
+    public function setStadiumName($stadiumName)
+    {
+        $this->stadiumName = $stadiumName;
+    }
+
+    /**
+     * @return int
+     */
+    public function getStadiumCapacity()
+    {
+        return $this->stadiumCapacity;
+    }
+
+    /**
+     * @param int $stadiumCapacity
+     */
+    public function setStadiumCapacity($stadiumCapacity)
+    {
+        $this->stadiumCapacity = $stadiumCapacity;
+    }
+
+    /**
+     * @return int
+     */
+    public function getTotalMarketValue()
+    {
+        return $this->totalMarketValue;
+    }
+
+    /**
+     * @param int $totalMarketValue
+     */
+    public function setTotalMarketValue($totalMarketValue)
+    {
+        $this->totalMarketValue = $totalMarketValue;
     }
 
     /**
