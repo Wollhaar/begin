@@ -5,22 +5,22 @@ Bundesliga, 1. Spieltag
     <ul>
         <f:for each="{clubs}" as="club">
             <f:if condition="{club.numberOfFans}>0">
-                <li>{club.name}: {club.numberOfFans}</li>
+                <li>{club.name}: {club.numberOfFans} <f:link.action action="show" arguments="{club: club}">Profil</f:link.action></li>
             </f:if>
         </f:for>
     </ul>
 </f:if>
 
 <f:if condition="{noobs}">
-    <h2>Vereine OHNE Fans</h2>
     <f:then>
-    <ul>
-        <f:for each="{noobs}" as="noob">
-            <f:if condition="{noob.name}">
-                <li>{noob.name}</li>
-            </f:if>
-        </f:for>
-    </ul>
+        <h2>Vereine OHNE Fans</h2>
+        <ul>
+            <f:for each="{noobs}" as="noob">
+                <f:if condition="{noob.name}">
+                    <li>{noob.name} <f:link.action action="show" arguments="{club: noob}">Profil</f:link.action></li>
+                </f:if>
+            </f:for>
+        </ul>
     </f:then>
     <f:else>
         <h3>Alle Vereine haben einen Fan gefunden</h3>
