@@ -4,7 +4,7 @@ CREATE TABLE tx_bundesligasimulator_domain_model_club (
 	pid int(11) DEFAULT '0' NOT NULL,
 
 	name varchar(255) DEFAULT '' NOT NULL,
-	founding_year tinyint(4) unsigned DEFAULT '0' NOT NULL,
+	founding_year int(4) unsigned DEFAULT '0' NOT NULL,
 	stadium_name varchar(255) DEFAULT '' NOT NULL,
   stadium_capacity int(11) unsigned DEFAULT '0' NOT NULL,
   total_market_value int(11) unsigned DEFAULT '0' NOT NULL,
