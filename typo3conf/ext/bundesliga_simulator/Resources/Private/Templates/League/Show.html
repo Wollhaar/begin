@@ -8,12 +8,18 @@
         <td>Gründungsjahr:</td><td>{club.foundingYear}</td>
     </tr>
     <tr>
-        <td>Stadionkapazität:</td><td>{club.stadiumCapacity}</td>
+        <td>Stadionkapazität:</td><td><f:format.number decimals="0" decimalSeparator="," thousandsSeparator=".">{club.stadiumCapacity}</f:format.number></td>
     </tr>
     <tr>
-        <td>Gesamtmarktwert:</td><td>{club.totalMarketValue}</td>
+        <td>Gesamtmarktwert:</td><td><f:format.number decimals="0" decimalSeparator="," thousandsSeparator=".">{club.totalMarketValue}</f:format.number></td>
     </tr>
     <tr>
-        <td>Fananzahl:</td><td>{club.numberOfFans}</td>
+        <td>Fananzahl:</td><td><f:format.number decimals="0" decimalSeparator="," thousandsSeparator=".">{club.numberOfFans}</f:format.number></td>
     </tr>
 </table>
+
+<style type="text/css" rel="stylesheet">
+    table td{
+        text-align: right;
+    }
+</style>
