@@ -27,6 +27,7 @@ namespace Exinit\BundesligaSimulator\Controller;
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
+use Exinit\BundesligaSimulator\Domain\Model\Player;
 use Exinit\BundesligaSimulator\Domain\Repository\PlayerRepository;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
@@ -50,14 +51,13 @@ class TransferController extends ActionController
         ]);
     }
 
-    public function showAction($playerId)
+    /**
+     * @param \Exinit\BundesligaSimulator\Domain\Model\Player $player
+     */
+    public function showAction($player)
     {
-        $onePlayer = $this->playerRepository->findSinglePlayer($playerId);
-        echo '<pre>';
-        var_dump($onePlayer);
-        echo '</pre>';
         $this->view->assignMultiple([
-            'player' => $onePlayer
+            'player' => $player
         ]);
     }
 
