@@ -3,7 +3,7 @@
 <span>Spielerdaten</span>
 <table>
     <tr>
-    <td>Geburtsdatum:</td><td>{player.birthday}</td>
+        <td>Geburtsdatum:</td><td><f:format.date format="d.M.Y">{player.birthday}</f:format.date></td>
     </tr>
     <tr>
         <td>Alter:</td><td>{player.age}</td>
@@ -12,7 +12,7 @@
         <td>Nationalität:</td><td>{player.nationality}</td>
     </tr>
     <tr>
-        <td>Größe:</td><td>{player.height}</td>
+        <td>Größe:</td><td>{player.height}cm</td>
     </tr>
     <tr>
         <td>Position:</td><td>{player.position}</td>
@@ -21,6 +21,6 @@
         <td>Atueller Verein:</td><td>{player.club}</td>
     </tr>
     <tr>
-        <td>Vertrag endet:</td><td>{player.contract}</td>
+        <td>Vertrag endet:</td><td><f:format.date format="d.M.Y">{player.contract}</f:format.date></td>
     </tr>
 </table>
