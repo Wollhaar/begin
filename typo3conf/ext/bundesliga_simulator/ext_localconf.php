@@ -7,18 +7,17 @@ if (!defined('TYPO3_MODE')) {
     'Exinit.BundesligaSimulator',
     'leaguemanagement',
     [
-        'League' => 'list',
+        'League' => 'list, show',
     ],
     // non-cacheable actions
     [
     ]
 );
-
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
     'Exinit.BundesligaSimulator',
     'transfermarket',
     [
-        'Transfer' => 'list',
+        'Transfer' => 'list, show',
     ],
     // non-cacheable actions
     [
