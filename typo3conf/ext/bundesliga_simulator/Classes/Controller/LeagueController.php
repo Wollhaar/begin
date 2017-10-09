@@ -50,11 +50,13 @@ class LeagueController extends ActionController
         ]);
     }
 
-    public function showAction($clubID)
+    /**
+     * @param \Exinit\BundesligaSimulator\Domain\Model\Club $club
+     */
+    public function showAction($club)
     {
-        $singleClub = $this->clubRepository->findSingleClub($clubID);
         $this->view->assignMultiple([
-            'club' => $singleClub,
+            'club' => $club,
         ]);
     }
 }
