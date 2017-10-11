@@ -5,7 +5,7 @@ Bundesliga, 1. Spieltag
     <ul>
         <f:for each="{clubs}" as="club">
             <f:if condition="{club.numberOfFans}>0">
-                <li>{club.name}: {club.numberOfFans} <f:link.action action="show" arguments="{club: club}">Profil</f:link.action></li>
+                <li>{club.name}: <f:format.number decimals="0" thousandsSeparator=".">{club.numberOfFans}</f:format.number> <f:link.action action="show" arguments="{club: club}">Profil</f:link.action></li>
             </f:if>
         </f:for>
     </ul>
