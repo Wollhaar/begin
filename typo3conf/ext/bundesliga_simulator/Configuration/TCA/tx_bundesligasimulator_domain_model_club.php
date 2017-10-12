@@ -123,6 +123,20 @@ return [
             ],
         ],
 
+//        foreign reference for coachID
+        'coach'      => [
+            'exclude'     => 1,
+            'label'       => $ll,
+            'config'      => [
+                'type'                => 'select',
+                'renderType'                => 'selectSingle',
+                'items'               => [
+                    ['', 0],
+                ],
+                'foreign_table'       => 'tx_bundesligasimulator_domain_model_coach',
+            ],
+        ],
+
         'name'           => [
             'exclude' => 0,
             'label'   => $ll . '.name',

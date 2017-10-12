@@ -32,6 +32,8 @@ use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 class Club extends AbstractEntity
 {
 
+    protected $coach;
+
     /**
      * @var string
      */
@@ -63,6 +65,22 @@ class Club extends AbstractEntity
     protected $numberOfFans;
 
 
+
+    /**
+     * @return mixed
+     */
+    public function getCoach()
+    {
+        return $this->coach;
+    }
+
+    /**
+     * @param mixed $coach
+     */
+    public function setCoach($coach)
+    {
+        $this->coach = $coach;
+    }
 
     /**
      * @return string
