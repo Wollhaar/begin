@@ -23,6 +23,9 @@
         <trans-unit id="tx_bundesligasimulator_domain_model_club.total_market_value" xml:space="preserve">
             <source>Gesamtmarktwert des Vereins</source>
         </trans-unit>
+        <trans-unit id="tx_bundesligasimulator_domain_model_club.coach" xml:space="preserve">
+            <source>Trainer</source>
+        </trans-unit>
         <trans-unit id="tx_bundesligasimulator_domain_model_club.numberOfFans" xml:space="preserve">
             <source>Anzahl der Fans</source>
         </trans-unit>
