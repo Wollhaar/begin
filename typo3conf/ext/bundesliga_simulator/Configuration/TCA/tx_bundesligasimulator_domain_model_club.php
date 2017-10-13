@@ -5,7 +5,7 @@ if (!defined('TYPO3_MODE')) {
     die ('Access denied.');
 }
 
-$fieldList = 'name, founding_year, stadium_name, stadium_capacity, total_market_value, number_of_fans';
+$fieldList = 'name, founding_year, stadium_name, stadium_capacity, total_market_value, coach, number_of_fans';
 $ll = 'LLL:EXT:bundesliga_simulator/Resources/Private/Language/locallang_be.xlf:tx_bundesligasimulator_domain_model_club';
 
 return [
@@ -125,15 +125,12 @@ return [
 
 //        foreign reference for coachID
         'coach'      => [
-            'exclude'     => 1,
-            'label'       => $ll,
+            'exclude'     => 0,
+            'label'       => $ll.'.coach',
             'config'      => [
+                'foreign_table'       => 'tx_bundesligasimulator_domain_model_coach',
                 'type'                => 'select',
                 'renderType'                => 'selectSingle',
-                'items'               => [
-                    ['', 0],
-                ],
-                'foreign_table'       => 'tx_bundesligasimulator_domain_model_coach',
             ],
         ],
 
