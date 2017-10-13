@@ -32,6 +32,9 @@ use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 class Club extends AbstractEntity
 {
 
+    /**
+     * @var string
+     */
     protected $coach;
 
     /**
