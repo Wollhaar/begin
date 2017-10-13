@@ -67,6 +67,21 @@
         <trans-unit id="tx_bundesligasimulator_domain_model_player.transfer_fee" xml:space="preserve">
             <source>Ablösesumme</source>
         </trans-unit>
+
+
+        <!-- der coach  -->
+        <trans-unit id="tx_bundesligasimulator_domain_model_coach" xml:space="preserve">
+            <source>Trainer</source>
+        </trans-unit>
+        <trans-unit id="tx_bundesligasimulator_domain_model_coach.name" xml:space="preserve">
+            <source>Name</source>
+        </trans-unit>
+        <trans-unit id="tx_bundesligasimulator_domain_model_coach.club" xml:space="preserve">
+            <source>Verein</source>
+        </trans-unit>
+        <trans-unit id="tx_bundesligasimulator_domain_model_coach.age" xml:space="preserve">
+            <source>Alter</source>
+        </trans-unit>
     </body>
 </file>
 </xliff>
