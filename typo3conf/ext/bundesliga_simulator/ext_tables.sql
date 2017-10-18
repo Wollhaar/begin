@@ -36,7 +36,6 @@ CREATE TABLE tx_bundesligasimulator_domain_model_club (
 	l10n_diffsource mediumblob,
 
 	PRIMARY KEY (uid),
-# 	CONSTRAINT coach_key FOREIGN KEY (coach) REFERENCES tx_bundesligasimulator_domain_model_coach(uid),
 	KEY parent (pid),
 	KEY t3ver_oid (t3ver_oid,t3ver_wsid),
 	KEY language (l10n_parent,sys_language_uid)
