@@ -1,5 +1,4 @@
 <h3>Vereinsprofil von <span style="color: #2aabd2">{club.name}</span></h3>
-
 <table>
     <tr>
         <td>Stadion:</td><td>{club.stadiumName}</td>
@@ -17,7 +16,7 @@
         <td>Fananzahl:</td><td><f:format.number decimals="0" decimalSeparator="," thousandsSeparator=".">{club.numberOfFans}</f:format.number></td>
     </tr>
     <tr>
-        <td>Trainer:</td><td>{club.coach}</td>
+        <td>Trainer:</td><td>{club.coach.name}</td>
     </tr>
 </table>
 
