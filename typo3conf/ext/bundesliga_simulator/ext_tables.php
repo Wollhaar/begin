@@ -27,7 +27,3 @@ if (!defined('TYPO3_MODE')) {
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_bundesligasimulator_domain_model_player',
     'EXT:bundesliga_simulator/Resources/Private/Language/locallang_csh_tx_bundesligasimulator_domain_model_player.xlf');
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_bundesligasimulator_domain_model_player');
-
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_bundesligasimulator_domain_model_coach',
-    'EXT:bundesliga_simulator/Resources/Private/Language/locallang_csh_tx_bundesligasimulator_domain_model_coach.xlf');
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_bundesligasimulator_domain_model_coach');
